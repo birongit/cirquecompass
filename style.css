@@ -58,14 +58,26 @@ nav {
 
 /* Remove bullet points if nav uses a list */
 nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 36px;
     list-style: none;
     padding: 0;
     margin: 0;
-    display: inline-block;
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 12px;
+  }
 }
 
 nav li {
-    display: inline;
+    display: block;
+    margin: 0;
+    padding: 0;
 }
 
 nav a {
@@ -82,6 +94,7 @@ nav a {
     background: none;
     position: relative;
     transition: color 0.18s;
+    display: block;
 }
 
 nav a::after {
